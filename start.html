@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>PRESS START</title>
+  <link href="https://fonts.googleapis.com/css?family=DotGothic16" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .start-button img {
+      width: 100%;
+      max-width: 600px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .start-button img:hover {
+      transform: scale(1.03);
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+    a{
+        text-align: center;
+        font-family: 'DotGothic16', sans-serif;
+        text-decoration: none;
+        color: #ffffff;
+        
+    }
+    p{
+        font-size: 60px;
+        font-weight: bolder;
+    }
+  </style>
+</head>
+<body>
+    <a href="foreword.html" class="start-button" >
+        <p>往復の電車。君に、届く。</p>
+        <img src="assets/gif/start2.gif" width=100%/>
+    </a>
+    
+    <script>
+        document.querySelector('.start-button').addEventListener('click', function(e) {
+        e.preventDefault(); // 暫停直接跳轉
+        document.body.classList.add('fade-out'); // 加入淡出動畫
+
+        // 等動畫跑完再跳轉（1000ms = 1秒）
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 1000);
+        });
+    </script>
+</body>
+</html>
