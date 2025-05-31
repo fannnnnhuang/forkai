@@ -54,6 +54,43 @@
         transform: translateY(0);
       }
     }
+
+    .flip-card {
+      background-color: transparent;
+      width: 200px;
+      height: 120px;
+      perspective: 1000px;
+      margin: 10px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 12px;
+    }
+    .flip-card-front {
+      background-color: #ffe0e08a;
+    }
+    .flip-card-back {
+      background-color: #ffe0e08a;
+      transform: rotateY(180deg);
+    }
   </style>
 </head>
 <body>
@@ -64,6 +101,12 @@
             現在的你，已經在我身邊，
             就是我一直想要的答案。」</h2><br>
         <h5><a href="kkai8.html" class="btn" >To Be Continued... </a></h5>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">❤️ 總是愛下廚給我的寶寶</div>
+            <div class="flip-card-back">謝謝寶寶做了很多寶寶牌食物給偶，好幸福~~幸せ</div>
+          </div>
+        </div>
     </div>
 </body>
 </html>

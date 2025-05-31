@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>第四站 —《月台，分開也連結的起點》</title>
   <link href="https://fonts.googleapis.com/css?family=DotGothic16" rel="stylesheet">
+  <script>
+    function revealTicket() {
+      document.getElementById('ticket-msg').textContent = "被發現小彩蛋ㄌ，愛你嘿嘿";
+    }
+  </script>
   <style>
     body {
       height: 100%;
@@ -54,6 +59,22 @@
         transform: translateY(0);
       }
     }
+
+    #ticket-msg{
+      font-family: 'DotGothic16', sans-serif;
+      font-weight: bolder;
+      color: rgb(230, 112, 184);
+      font-size: 20px;
+      background-color: #ffffff71;
+    }
+
+    .ticket {
+      cursor: pointer;
+      display: inline-block;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -62,6 +83,11 @@
         <h1>《月台，分開也連結的起點》</h1><br>
         <h2>「每次說再見，我們都站在不同方向的列車上，卻從沒停止奔向彼此。」</h2><br>
         <h5><a href="kkai7.html" class="btn" >N E X T 🚉</a></h5>
+        <p id="ticket-msg"></p>
+    </div>
+    
+    <div class="ticket" onclick="revealTicket()">
+      <img src="assets/gif/heart2.gif" width="50"/>
     </div>
 </body>
 </html>
